@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: white;
+  background: black;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+#start-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100%;
+}
+
+#start-container > div {
+  align-self: center;
+}
+
+#start-container h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-family: 'Permanent Marker', 'Roboto', 'Arial', sans-serif;
+}
+
+#noms-container {
+  text-align: center;
+  padding: 0 12px;
+}
+
+#noms {
+  width: 400px;
+  height: 600px;
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 18px;
+  color: white;
+  text-shadow: 0px 1px 1px black;
+  background: #333;
+  border: #111;
+  box-shadow: 0px 0px 4px #aaa;
+}
+
+#btn {
+  margin: auto;
+  font-size: 18px;
+  padding: 6px;
+  font-weight: bold;
+}
+
+#festa-container {
+  margin: auto 64px;
+}
+
+#festa-container img {
+  width: 100%;
+}
+
+#rifa-container {
+  display: none;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#nom {
+  font-family: 'Permanent Marker', 'Roboto', 'Arial', sans-serif;
+  font-size: 70px;
+}
+
+#congrats {
+  opacity: 0;
+  transition: opacity .5s;
+  font-size: 22px;
+}
+
+#repeat {
+  opacity: 0;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  transition: opacity .5s;
+}
+
+body.rifa-started #start-container {
+  display: none;
+}
+
+body.rifa-started #rifa-container {
+  display: flex;
+}
+
+body.rifa-finished #congrats {
+  opacity: 1;
+}
+
+body.rifa-finished #repeat {
+  opacity: 1;
+}
